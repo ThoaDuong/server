@@ -1,12 +1,15 @@
+import { LanguageEntity } from './entities/language.entity';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SongEntity } from './entities/song.emtity';
+import { PlaylistEntity } from './entities/playlist.entitty';
+import { SongEntity } from './entities/song.entity';
 
 export const entities = [
     SongEntity,
-    // PlaylistEntity,
+    PlaylistEntity,
+    LanguageEntity,
 ]
 @Module({
   imports: [
